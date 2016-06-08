@@ -1,0 +1,19 @@
+<template name="_tabs">
+  {{#if isAndroid}}
+    {{#ionTabs style="android" class="tabs-background-positive tabs-color-light"}}
+      {{> ionTab title="Facultăți" path="contacts" icon="android-home"}}
+      {{> ionTab title="Despre" path="despre" icon="information-circled"}}
+    
+      {{> ionTab title="Calendar" path="calendar" icon="android-calendar"}}
+      {{> ionTab title="Acte" path="acte" icon="document-text"}}
+    {{/ionTabs}}
+  {{else}}
+    {{#ionTabs style="ios"}}
+      {{> ionTab title="Facultăți" path="contacts" iconOff="ios-home-outline" iconOn="ios-home"}}
+      {{> ionTab title="Despre" path="despre" iconOff="ios-information-outline" iconOn="ios-information"}}
+
+      {{> ionTab title="Calendar" path="calendar" iconOff="ios-calendar-outline" iconOn="ios-calendar"}}
+      {{> ionTab title="Acte" path="acte" iconOff="ios-list-outline" iconOn="ios-list"}}
+    {{/ionTabs}}
+  {{/if}}
+</template> 

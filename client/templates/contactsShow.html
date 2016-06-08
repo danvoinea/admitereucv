@@ -1,0 +1,58 @@
+<template name="contactsShow">
+  {{#contentFor "headerButtonLeft"}}
+    <img class="headerimg" src="/img/ucv.png">
+    {{>ionNavBackButton path="contacts" text="Facultăți"}}
+  {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+    <h1 class="title">Detalii</h1>
+    {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding contact-detail"}}
+      {{#with facultate}}
+    
+    
+        <div class="list card">
+          <div class="item titlu">
+            <h2>Facultatea de {{nume}}</h2>
+            <p>{{descriere}}</p>
+          </div>
+
+          <div class="item item-body specializari">
+           
+
+            <h2>Specializări:</h2>
+            <p>
+                {{#each specializari}}
+                    <h3>{{nume}} - {{descriere}}</h3>
+                        {{#each specializari}}
+                            <i>{{nume}}</i> - {{descriere}}<br />
+                        {{/each}}    
+                {{/each}}    
+            </p>
+            
+
+          </div>
+
+          <div class="item item-body">
+            <h2>Condiții de admitere</h2>
+            <p>{{{admitere}}}</p>
+          </div>
+    
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="{{web}}" onclick="window.open(this.href, '_system', 'location=no');return false;" >
+              <i class="icon ion-share"></i>
+              {{web}}
+            </a>
+            <a class="tab-item" href="tel:{{phone telefon}}" onclick="window.open('tel:{{phone telefon}}', '_system')">
+              <i class="icon ion-iphone"></i>
+              {{telefon}}
+            </a>
+          </div>
+
+        </div>
+      {{/with}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

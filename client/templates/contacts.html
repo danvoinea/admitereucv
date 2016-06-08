@@ -1,0 +1,19 @@
+<template name="contacts">
+  {{#contentFor "headerTitle"}}
+    <img class="headerimg" src="/img/ucv.png"> 
+    <h1 class="title">Universitatea din Craiova</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+        {{#each facultati}}
+          {{#ionItem path="contacts.show" buttonRight=true avatar=false class="item-icon-right"}}
+            {{nume}} 
+            {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+          {{/ionItem}}
+        {{/each}}
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

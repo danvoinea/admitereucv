@@ -1,0 +1,17 @@
+.item-body.specializari h3 { margin-bottom:5px; }
+.headerimg { margin-left:10px; height:35px; width: 33px;}
+.item p {white-space: normal !important;}
+
+.ionic-body .bar.bar-positive { background-color: #013f81; border-color: #013f81; }
+a.positive, .positive { color: #013f81 !important; }
+
+.item.titlu h2 { color: #013f81; font-weight: 800; margin-bottom:10px;}
+
+img.prezentare { width:100%; max-width:800px;text-align: center;}
+.center { text-align: center; }
+
+li i, p i { font-style: italic; font-weight: regular;}
+
+.bar h1.title { text-overflow: inherit; font-size:15px; font-weight: 800;}
+a.item{ font-size: 14px; padding: 10px 80px 10px 16px;}
+.back-text { font-size: 15px; }
